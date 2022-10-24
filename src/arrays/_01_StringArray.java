@@ -41,6 +41,7 @@ public class _01_StringArray {
         for (int j = 0; j <= 2; j++) {
             System.out.println("Country at index of " + j + " is = " + countries[j]);
         }
+        System.out.println("Hello World!!");
 
 
 
