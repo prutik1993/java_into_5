@@ -121,17 +121,16 @@ public class Project05 {
     public static void findMostRepeatedElementInAnArray(String[] things) {
         String mostRepeated = "";
         int rep = 0;
-        for (int i = 0; i < things.length; i++) {
-            int count = 0;
-            for (int j = i + 1; j < things.length; j++) {
-                if (things[j].equals(things[i])) {
+        int count = 0;
+        for (int i = 0, j = i + 1; i < things.length - 1; i++, j++) {
+            if (things[j].equals(things[i])) {
                     count++;
                 }
                 if (count >= rep) {
                     mostRepeated = things[i];
                     rep = count;
                 }
-            }
+
         }
         System.out.println(mostRepeated);
     }
