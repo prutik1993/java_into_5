@@ -7,7 +7,7 @@ public class UnderstandingArrays {
 
         // Storing best friend names
         String bff1 = "Jane", bff2 = "Alex",bff3 = "Mike" ; */
-        String [] names = {"Beyza", "Andrii", "Vlad", "Ana", "Olena"}; // holding collection of names
+        String[] names = {"Beyza", "Andrii", "Vlad", "Ana", "Olena"}; // holding collection of names
 
         // Retrieving an element from an array - using index
         System.out.println(names[2]);

@@ -80,6 +80,8 @@ public class Homework06 {
         }
 
 
+
+
         System.out.println("\n------------------------Task-8------------------------");
 
         char[] characters = {'A', 'b', 'G', 'H', '7', '5', '&', '*', 'e', '@', '4'};

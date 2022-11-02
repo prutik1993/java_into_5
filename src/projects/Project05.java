@@ -14,7 +14,9 @@ public class Project05 {
 
         System.out.println("\n------------Task-3------------");
         int[] numbers1 = {10, 5, 6, 7, 8, 5, 15, 15};
+        int[] numbers2 = {10};
         findSecondGreatestAndSmallestWithSort(numbers1);
+        findSecondGreatestAndSmallestWithSort(numbers2);
 
         System.out.println("\n------------Task-4------------");
         findSecondGreatestAndSmallest(numbers1);
@@ -54,19 +56,22 @@ public class Project05 {
     ////////////////////////Task-3////////////////////////
     public static void findSecondGreatestAndSmallestWithSort(int[] numbers) {
         Arrays.sort(numbers);
-        int min = numbers[0];
-        int max = numbers[numbers.length - 1];
-        int secondMax = Integer.MIN_VALUE;
-        int secondMin = Integer.MAX_VALUE;
 
-        for (int i = 0; i < numbers.length - 1; i++) {
-            if (numbers[i] > secondMax && numbers[i] != max)
-                secondMax = numbers[i];
-            if (numbers[i] < secondMin && numbers[i] != min)
-                secondMin = numbers[i];
-        }
-        System.out.println("Second smallest = " + secondMin);
-        System.out.println("Second greatest = " + secondMax);
+        if(numbers.length > 1){
+            int min = numbers[0];
+            int max = numbers[numbers.length - 1];
+            int secondMax = Integer.MIN_VALUE;
+            int secondMin = Integer.MAX_VALUE;
+
+            for (int i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i] > secondMax && numbers[i] != max)
+                    secondMax = numbers[i];
+                if (numbers[i] < secondMin && numbers[i] != min)
+                    secondMin = numbers[i];
+            }
+            System.out.println("Second smallest = " + secondMin);
+            System.out.println("Second greatest = " + secondMax);
+        }else System.out.println("Array is invalid");
     }
 
     ////////////////////////Task-4////////////////////////
@@ -123,7 +128,7 @@ public class Project05 {
         int rep = 0;
         int count = 0;
         for (int i = 0, j = i + 1; i < things.length - 1; i++, j++) {
-            if (things[j].equals(things[i])) {
+            if (things[i].equals(things[j])) {
                     count++;
                 }
                 if (count >= rep) {
