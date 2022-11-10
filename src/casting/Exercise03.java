@@ -7,7 +7,7 @@ public class Exercise03 {
         Scanner input = new Scanner(System.in);
         double priceForPS5 = 600;
         System.out.println("The price for PS5 is currently = $ " + priceForPS5);
-        System.out.println("How much are you going to save daily?");
+        System.out.println("Please enter how much are you going to save daily?");
         double dailySave = input.nextDouble();
         System.out.println("You can buy PS5 in " + (int) (priceForPS5 / dailySave) + " days");
 

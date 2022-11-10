@@ -101,7 +101,7 @@ public class Homework07 {
         int noAorE = 0;
         for(String element : stuff){
             if(element.toLowerCase().startsWith("m")) startsM++;
-            if(!element.toLowerCase().contains("e") && !element.toLowerCase().contains("a")) noAorE++;
+            if(!element.toLowerCase().contains("e") && element.toLowerCase().contains("a")) noAorE++;
         }
         System.out.println(startsM);
         System.out.println(noAorE);

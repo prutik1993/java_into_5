@@ -136,6 +136,7 @@ public class Project05 {
                     rep = count;
                 }
 
+
         }
         System.out.println(mostRepeated);
     }

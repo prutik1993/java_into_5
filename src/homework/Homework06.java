@@ -117,7 +117,7 @@ public class Homework06 {
         for(String stuff : schoolStuff){
             if(Character.isUpperCase(stuff.charAt(0))) upper++;
             else if(Character.isLowerCase(stuff.charAt(0))) lower++;
-            if(stuff.toLowerCase().charAt(0) == 'b' || stuff.toLowerCase().charAt(0) == 'p')
+            if(stuff.toLowerCase().startsWith("b") || stuff.toLowerCase().startsWith("p"))
                 startsBP++;
             if(stuff.toLowerCase().contains("book") || stuff.toLowerCase().contains("pen"))
                 count++;

@@ -108,7 +108,7 @@ public class Homework05 {
         int a = 0;
         int b = 1;
        String total = "";
-        for (int i = 1; i <= number ; i++) {
+        for (int i = 0; i < number ; i++) {
             total += a + " - ";
             sum = a + b;
             a = b;
