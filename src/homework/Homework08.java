@@ -10,30 +10,67 @@ public class Homework08 {
     public static void main(String[] args) {
 
         System.out.println("==================Task-1==================");
-        String str1 = " Javattt ";
-        System.out.println(countConsonants(str1));
+
+        String lime1 = "hello";
+        String lime2 = "Java";
+        String lime3 = "";
+        System.out.println(countConsonants(lime1));
+        System.out.println(countConsonants(lime2));
+        System.out.println(countConsonants(lime3));
+
 
         System.out.println("==================Task-2==================");
-        String str2 = "Hello, nice  to meet  you!!";
-        System.out.println(Arrays.toString(wordArray(str2)));
+
+        String lemon1 = "hello";
+        String lemon2 = "java is  fun";
+        String lemon3 = "Hello, nice to meet you!!";
+        System.out.println(Arrays.toString(wordArray(lemon1)));
+        System.out.println(Arrays.toString(wordArray(lemon2)));
+        System.out.println(Arrays.toString(wordArray(lemon3)));
+
 
         System.out.println("==================Task-3==================");
-        String str3 = " Java  is    fun ";
-        System.out.println(removeExtraSpaces(str3));
+
+        String orange1 = "hello";
+        String orange2 = " Java  is    fun ";
+        String orange3 = "Hello,  nice  to  meet   you!!";
+        System.out.println(removeExtraSpaces(orange1));
+        System.out.println(removeExtraSpaces(orange2));
+        System.out.println(removeExtraSpaces(orange3));
+
 
         System.out.println("==================Task-4==================");
 
-       String sentence = "";
+        String sentence = "";
         System.out.println(count3OrLess(sentence));
         
 
         System.out.println("==================Task-5==================");
-        String dateOfBirth = "2/16/1957";
-        System.out.println(isDateFormatValid(dateOfBirth));
+
+        String dateOfBirth1 = "01/21/1999";
+        String dateOfBirth2 = "1/20/1991";
+        String dateOfBirth3 = "10/2/1991";
+        String dateOfBirth4 = "12-20 2000";
+        String dateOfBirth5 = "12/16/19500";
+        System.out.println(isDateFormatValid(dateOfBirth1));
+        System.out.println(isDateFormatValid(dateOfBirth2));
+        System.out.println(isDateFormatValid(dateOfBirth3));
+        System.out.println(isDateFormatValid(dateOfBirth4));
+        System.out.println(isDateFormatValid(dateOfBirth5));
+
 
         System.out.println("==================Task-6==================");
-        String email = "abc@gmail!com";
-        System.out.println(isEmailFormatValid(email));
+
+        String email1 = "abc@gmail.com";
+        String email2 = "abc@student.techglobal.com";
+        String email3 = "a@gmail.com";
+        String email4 = "abcd@@gmail.com";
+        String email5 = "abc@gmail";
+        System.out.println(isEmailFormatValid(email1));
+        System.out.println(isEmailFormatValid(email2));
+        System.out.println(isEmailFormatValid(email3));
+        System.out.println(isEmailFormatValid(email4));
+        System.out.println(isEmailFormatValid(email5));
 
     }
 
@@ -72,7 +109,6 @@ public class Homework08 {
             wordCounter++;
         }
         return wordCounter;
-
     }
 
     //////////////////////////Task-5//////////////////////////
@@ -81,9 +117,8 @@ public class Homework08 {
         return Pattern.matches("[\\d]{2}/[\\d]{2}/[\\d]{4}",dateOfBirth);
     }
 
-    //////////////////////////Task-6//////////////////////////  <2+chars>@<2+chars>.<2+chars>
+    //////////////////////////Task-6//////////////////////////
     public static boolean isEmailFormatValid(String email){
-        return Pattern.matches("[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}",email);
+        return Pattern.matches("[\\w_.#&-]{2,}@[\\w_.#&-]{2,}\\.[\\w]{2,}",email);
     }
-
 }
