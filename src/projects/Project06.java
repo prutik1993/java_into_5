@@ -11,37 +11,46 @@ public class Project06 {
 
     //////////////////////////Task-1//////////////////////////
     public static int  countMultipleWords(String[] coconuts) {
-        int counter = 0;
-        for (String coconut : coconuts) {
-            coconut = coconut.trim();
-            if(Pattern.matches("[\\w]+ [\\w ]+",coconut)) counter++;
+//        int counter = 0;
+//        for (String coconut : coconuts) {
+//            coconut = coconut.trim();
+//            if(Pattern.matches("[\\w]+ [\\w ]+",coconut)) counter++;
+//
+//        }
 
-        }
-        return counter;
+        return (int) Arrays.stream(coconuts).filter(coconut -> coconut.trim().matches("[\\w]+ [\\w ]+")).count();
+       // return counter;
     }
 
 
     //////////////////////////Task-2//////////////////////////
     public static ArrayList<Integer> removeNegatives(ArrayList<Integer> numbers){
-        Iterator<Integer> negativeIterator = numbers.iterator();
-        while(negativeIterator.hasNext()){
-            Integer n = negativeIterator.next();
-           if(n < 0) negativeIterator.remove();
+//        Iterator<Integer> negativeIterator = numbers.iterator();
+//        while(negativeIterator.hasNext()){
+//            Integer n = negativeIterator.next();
+//           if(n < 0) negativeIterator.remove();
+//        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if(numbers.get(i) < 0) numbers.remove(i--);
         }
+        // numbers.removeIf(integer -> integer < 0);
         return numbers;
     }
 
 
     //////////////////////////Task-3//////////////////////////
     public static boolean validatePassword(String password){
-        return (Pattern.matches("(?=.*[A-Z])(?=.*[a-z])(?=.*[\\d])(?=.*[@#$%*&!?+_])\\S{8,16}" ,password));
+        //return (Pattern.matches("(?=.*[A-Z])(?=.*[a-z])(?=.*[\\d])(?=.*[@#$%*&!?+_])\\S{8,16}" ,password));
+        return password.matches("(?=.*[A-Z])(?=.*[a-z])(?=.*[\\d])(?=.*[@#$%*&!?+_-])\\S{8,16}");
     }
 
 
     //////////////////////////Task-4//////////////////////////
 
     public static boolean validateEmailAddress(String email){
-        return Pattern.matches("[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}",email);
+       //return Pattern.matches("[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}",email);
+        return email.matches("[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}");
     }
 
 
@@ -50,7 +59,7 @@ public class Project06 {
 
         System.out.println("\n=======================Task-1=======================\n");
 
-        String[] coconuts = {"foo", "", " ", "foo bar", "java is fun", "ruby"};
+        String[] coconuts = {"foo", "", " ", "foo bar", "java is fun", "ruby", "i love java", "Hello how are you"};
         System.out.println(countMultipleWords(coconuts));
 
 

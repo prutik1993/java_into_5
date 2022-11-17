@@ -115,7 +115,14 @@ public class ForMe {
         System.out.println(counter);
 
 
+        
 
+        int count2 = 1;
+        String a1 = "Java is th best";
+        for (int i = 0; i < a1.length(); i++) {
+            if(a1.charAt(i) == ' ') count2++;
+        }
+        System.out.println(count2);
 
 
 
