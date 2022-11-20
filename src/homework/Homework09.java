@@ -29,9 +29,9 @@ public class Homework09 {
 
         System.out.println("\n____________________Task-2____________________\n");
 
-        String[] words2 = {"Z", "abc", "z", "123", "#"};
+        //String[] words2 = {"Z", "abc", "z", "123", "#"};
         // String[] words2 = {"xyz", "java", "abc"};
-        // String[] words2 = {"a", "b", "B", "XYZ", "123"};
+         String[] words2 = {"a", "b", "B", "XYZ", "123"};
 
         String duplicate2 = "";
         boolean duplicateFound2 = false;
@@ -50,8 +50,8 @@ public class Homework09 {
 
         System.out.println("\n____________________Task-3____________________\n");
 
-        //int[] numbers3 = {0, -4, -7, 0, 5, 10, 45, -7, 0};
-          int[] numbers3 = {1, 2, 5, 0, 7};
+            int[] numbers3 = {0, -4, -7, 0, 5, 10, 45, -7, 0};
+         // int[] numbers3 = {1, 2, 5, 0, 7};
 
         ArrayList<Integer> nums = new ArrayList<>();
 
@@ -104,7 +104,7 @@ public class Homework09 {
         String answer = "";
 
         for (String s : newStr) {
-            answer += new StringBuilder(s).reverse().toString() + " ";
+            answer += new StringBuilder(s).reverse() + " ";
         }
         System.out.println(answer.substring(0,answer.length() - 1));
 
