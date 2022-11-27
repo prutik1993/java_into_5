@@ -152,6 +152,5 @@ public class Homework10 {
         //int[] numbers8 = {10, -13, 8, 12, 15, -20};
         int[] numbers8 = {7, 0, 8, 5, 15, -15};
         System.out.println(indClosestTo10(numbers8));
-
     }
 }
