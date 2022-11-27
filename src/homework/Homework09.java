@@ -2,6 +2,7 @@ package homework;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Homework09 {
     public static void main(String[] args) {
@@ -55,6 +56,7 @@ public class Homework09 {
 
         ArrayList<Integer> nums = new ArrayList<>();
 
+
         for (int i = 0; i < numbers3.length - 1; i++) {
             for (int j = i + 1; j < numbers3.length; j++) {
                if(numbers3[i] == numbers3[j] && !nums.contains(numbers3[i]))
@@ -87,12 +89,28 @@ public class Homework09 {
         //String[] words5 = {"abc", "foo", "bar"};
           String[] words5 = {"java", "python", "ruby"};
 
-         ArrayList<String> arr = new ArrayList<>();
+//         ArrayList<String> arr = new ArrayList<>();
+//         for (int i = words5.length - 1; i >= 0 ; i--) {
+//            arr.add(words5[i]);
+//        }
+//        System.out.println(arr);
 
-        for (int i = words5.length - 1; i >= 0 ; i--) {
-            arr.add(words5[i]);
+      //  Collections.reverse(Arrays.asList(words5));
+       // System.out.println(Arrays.toString(words5));
+
+        int firstIndex = 0;
+        int lastIndex = words5.length-1;
+        String storage;
+        while (firstIndex < lastIndex) {
+            storage = words5[firstIndex];
+            words5[firstIndex] = words5[lastIndex];
+            words5[lastIndex] = storage;
+            firstIndex++;
+            lastIndex--;
         }
-        System.out.println(arr);
+        System.out.println(Arrays.toString(words5));
+
+
 
 
         System.out.println("\n____________________Task-6____________________\n");
@@ -100,13 +118,14 @@ public class Homework09 {
         //String str5 = "Java is fun";
           String str5 = "Today is a fun day";
 
-        String[] newStr = str5.split(" ");
+        String[] newStr = str5.split("[ ]+"); // in case we have more than one space
         String answer = "";
 
         for (String s : newStr) {
             answer += new StringBuilder(s).reverse() + " ";
         }
-        System.out.println(answer.substring(0,answer.length() - 1));
+        //System.out.println(answer.substring(0,answer.length() - 1)); we can do this as well
+        System.out.println(answer.trim());
 
         }
     }

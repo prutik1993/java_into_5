@@ -8,7 +8,7 @@ import java.util.Locale;
 public class Homework07 {
     public static  void main(String[] args) {
 
-        System.out.println("\n----------------------Task-1----------------------\n");
+       /* System.out.println("\n----------------------Task-1----------------------\n");
 
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
@@ -145,7 +145,11 @@ public class Homework07 {
         System.out.println("Elements that can be divided by 10 = " + dividedBy10);
         System.out.println("Elements that are even and greater than 15 = " + greaterThan15);
         System.out.println("Elements that are odd and less than 20 = " + lessThan20);
-        System.out.println("Elements that are less than 15 or greater than 50 = " + less15Greater50);
+        System.out.println("Elements that are less than 15 or greater than 50 = " + less15Greater50); */
+
+
+
+
 
 
 

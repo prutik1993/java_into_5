@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Homework06 {
     public static void main(String[] args) {
 
-        System.out.println("\n------------------------Task-1------------------------");
+        /*System.out.println("\n------------------------Task-1------------------------");
 
         int[] numbers = new int[10];
 
@@ -156,7 +156,12 @@ public class Homework06 {
         for (int i = 0; i < first.length; i++) {
             third[i] = Math.max(first[i], second[i]);
         }
-        System.out.println("3rd array is = " + Arrays.toString(third) );
+        System.out.println("3rd array is = " + Arrays.toString(third) );*/
+
+
+
+
+
 
     }
 }

@@ -27,12 +27,6 @@ public class ForMe {
 //            System.out.println("Character not letter or digit");
 //        }
 
-        String name = "Anastasiya";
-        String reverse = "";
-        for(int i = name.length()-1; i >= 0; i--){
-            reverse += name.charAt(i);
-        }
-        System.out.println(reverse);
 
         int iter = 7;
         int fNum = 0;
@@ -100,29 +94,164 @@ public class ForMe {
 
         word = word.trim();
 
-       word = word.substring(word.lastIndexOf(" ") + 1) +
+        word = word.substring(word.lastIndexOf(" ") + 1) +
                word.substring(word.indexOf(" "),word.lastIndexOf(" ") + 1)  +
                word.substring(0,word.indexOf(" "));
         System.out.println(word);
 
 
-        String word1 = "The best is Java";
-        int counter = 1;
 
-        for(int i = 0; i <= word1.length()-1; i ++){
-            if(Character.isWhitespace(word1.charAt(i))) counter++;
+        System.out.println("\n__________find the first duplicated number in an int array numbers__________\n");
+
+        //int[] numbers1 = {-4, 0, -7, 0, 5, 10, 45, 45};
+         //int[] numbers1 = {3, 4, 3, 3, 5, 5, 6, 6, 7};
+        int[] numbers1 = {-8, 56, 7, 8, 65};
+
+        boolean isDuplicate = false;
+        int duplicate = 0;
+
+        for(int i = 0; i < numbers1.length-1; i++){
+            for (int j = i + 1; j < numbers1.length; j++) {
+                if(numbers1[i] == numbers1[j] && !isDuplicate){
+                    duplicate = numbers1[i];
+                isDuplicate = true;
+                break;
+                }
+            }
+
         }
-        System.out.println(counter);
+        System.out.println(isDuplicate ? duplicate : "There is no duplicates");
 
 
-        
+        System.out.println("\n__________find the first duplicated number in an int array String__________\n");
 
-        int count2 = 1;
-        String a1 = "Java is th best";
-        for (int i = 0; i < a1.length(); i++) {
-            if(a1.charAt(i) == ' ') count2++;
+        String[] words2 = {"Z", "abc", "z", "123", "#"};
+         //String[] words2 = {"xyz", "java", "abc"};
+         //String[] words2 = {"a", "b", "B", "XYZ", "123"};
+
+        String answer2 = "";
+        boolean duplicateFound = false;
+
+        for(int i = 0; i < words2.length-1; i++){
+            for (int j = i + 1; j < words2.length; j++) {
+                if(words2[i].equalsIgnoreCase(words2[j]) && !duplicateFound){
+                    answer2 = words2[i];
+                    duplicateFound = true;
+                    break;
+                }
+            }
         }
-        System.out.println(count2);
+        System.out.println(duplicateFound ? answer2 : "There is no duplicates");
+
+
+        System.out.println("\n__________find the all duplicates in an int array numbers__________\n");
+
+        //int[] numbers3 = {0, -4, -7, 0, 5, 10, 45, -7, 0};
+        int[] numbers3 = {1, 2, 5, 0, 7};
+
+        ArrayList<Integer> numbers2 = new ArrayList<>();
+
+        for (int i = 0; i < numbers3.length - 1; i++) {
+            for (int j = i + 1; j < numbers3.length; j++) {
+                if(numbers3[i] == numbers3[j] && !numbers2.contains(numbers3[i]))
+                    numbers2.add(numbers3[i]);
+            }
+        }
+        if(numbers2.isEmpty()) System.out.println("There is no duplicates");
+        else numbers2.forEach(System.out::println);
+
+
+        System.out.println("\n__________find the all duplicates in an int array String__________\n");
+
+        String[] words4 = {"A", "foo", "12" , "Foo", "bar", "a", "a", "java"};
+        // String[] words4 = {"python", "foo", "bar", "java", "123" };
+
+        String answer3 = "";
+
+        for (int i = 0; i < words4.length-1; i++) {
+            for (int j = i + 1; j < words4.length; j++) {
+                if(words4[i].equalsIgnoreCase(words4[j]) && !answer3.contains(words4[i].toLowerCase())){
+                    answer3 += words4[i].toLowerCase();
+                System.out.println(words4[i]);
+                }
+            }
+        }
+        if(answer3.isEmpty()) System.out.println("There is no duplicates");
+
+
+        System.out.println("\n__________reverse elements in an array__________\n");
+
+        //String[] words5 = {"abc", "foo", "bar"};
+        String[] words5 = {"java", "python", "ruby"};
+
+        ArrayList<String> arr = new ArrayList<>();
+
+        for (int i = words5.length-1; i >= 0 ; i--) {
+            arr.add(words5[i]);
+        }
+        System.out.println(arr);
+
+        System.out.println("\n__________reverse each word in a given String__________\n");
+
+        //String str5 = "Java is fun";
+        String str5 = "Today is a fun day";
+
+        String[] arr1 = str5.split(" ");
+        //System.out.println(Arrays.toString(arr1));
+        String str = "";
+        for (String s : arr1) {
+            str += new StringBuilder(s).reverse() + " ";
+        }
+        System.out.println(str.substring(0,str.length()-1));
+
+
+        System.out.println("\n__________count how many words in a String__________\n");
+
+        String str6 = "Today is a fun day";
+
+        int count1 = 1;
+
+//        for (int i = 0; i < str.length()-1; i++) {
+//            if(str.charAt(i) == ' ') count1++;
+//        }
+//        System.out.println(count1);
+
+        for (int i = 0; i < str6.length()-1; i++) {
+            if(Character.isWhitespace(str6.charAt(i))) count1++;
+        }
+        System.out.println(count1);
+
+        System.out.println("\n__________reverse a String__________\n");
+
+        String name1 = "Anastasiya";
+
+        //String name2 = new StringBuilder(name1).reverse().toString();
+        //System.out.println(name2);
+
+        String name2 = "";
+        for (int i = name1.length()-1; i >= 0 ; i--) {
+            name2 += name1.charAt(i);
+        }
+        System.out.println(name2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
