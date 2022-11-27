@@ -24,8 +24,7 @@ public class Homework10 {
       for (int i = 0; i < str.length(); i++) {
           if(str.charAt(i) == 'a') counter++;
        }
-
-        return counter;
+      return counter;
     }
 
     ///////////////////////////Task-3///////////////////////////
@@ -75,8 +74,8 @@ public class Homework10 {
         }
         if(n1.length > n2.length) return n1;
         return n2;
-
     }
+
     ///////////////////////////Task-8///////////////////////////
 
     public static int indClosestTo10(int[] numbers){
@@ -87,7 +86,7 @@ public class Homework10 {
         }
         return closestTo10;
     }
-// 4-arg constructor
+
 
     public static void main(String[] args) {
 
