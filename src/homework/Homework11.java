@@ -46,6 +46,7 @@ public class Homework11 {
         int min = Math.min(Math.min(n1,n2),n3);
         return (max + min)/2;
     }
+
     //////////////////////////////Task-6//////////////////////////////
     public static String[] noA(String[] str){
         String[] answer = new String[str.length];
