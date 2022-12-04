@@ -1,11 +1,8 @@
 package projects;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.stream.IntStream;
 
-public class Project07 {
+public class Project08 {
     //////////////////////////Task-1//////////////////////////
     public static int  findClosestDistance(int[] numbers){
         int answer = Integer.MAX_VALUE;
