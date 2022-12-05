@@ -1,5 +1,6 @@
 package homework;
 
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
@@ -30,14 +31,10 @@ public class Homework11 {
 
     //////////////////////////////Task-4//////////////////////////////
     public static String checkAge(int year) {
-        int currentYear = 2022;
-        int answer = currentYear - year;
-        if(answer > 100 || year > currentYear)
-            return "AGE IS NOT VALID";
-        else if(answer < 16)
-            return "AGE IS NOT ALLOWED";
-        else  return "AGE IS ALLOWED";
-
+        int currentYear = Year.now().getValue();
+        if(currentYear - year > 100 || year > currentYear) return "AGE IS NOT VALID";
+        else if(currentYear - year < 16) return "AGE IS NOT ALLOWED";
+        return "AGE IS ALLOWED";
     }
 
     //////////////////////////////Task-5//////////////////////////////
@@ -120,10 +117,10 @@ public class Homework11 {
         System.out.println("\n______________________Task-4______________________\n");
 
          //int year = 2010;
-          int year = 2006;
+         //int year = 2006;
          // int year = 2050;
          //int year = 1920;
-         //int year = 1800;
+         int year = 1800;
 
         System.out.println(checkAge(year));
 
