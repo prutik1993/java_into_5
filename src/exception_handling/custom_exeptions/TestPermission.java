@@ -32,10 +32,11 @@ public class TestPermission {
             e.printStackTrace();
        }finally {
 
-            Date date = new Date();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE");
+            Date date = new Date(); // Sat Dec 10 14:53:59 CST 2022
+            SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE"); // Saturday
             System.out.println("The current date is " + dateFormat.format(date));
         }
+
 
 
 
