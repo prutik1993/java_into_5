@@ -30,6 +30,5 @@ public class Task01 {
                 throw new IllegalStateException("No such frequency!!!");
         }
 
-        DayOfWeek.
     }
 }
