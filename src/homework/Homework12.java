@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Homework12 {
     ///////////////////////Task-1///////////////////////
     public static String noDigit(String str){
-        return str.replaceAll("[0-9]","");
+        return str.replaceAll("\\d","");
     }
 
     ///////////////////////Task-2///////////////////////
@@ -40,20 +40,27 @@ public class Homework12 {
         int sum = a + b + c;
         return sum - max - min;
     }
+    ///////////////////////Task-5B///////////////////////
+    public static int middleIntB(int a,int b,int c){
+        int[] numbers = {a,b,c};
+        Arrays.sort(numbers);
+        return numbers[1];
+    }
 
     ///////////////////////Task-6///////////////////////
     public static int[] no13(int[] numbers){
-        for (int number : numbers) {
-            if(number == 13)
-                number = 0;
+        int[] n = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i] != 13)
+                n[i] = numbers[i];
+            else n[i] = 0;
         }
-        return numbers;
+        return n;
     }
 
     ///////////////////////Task-7///////////////////////
     public static int[] arrFactorial(int[] numbers){
         int[] numbers2 = new int[numbers.length];
-         // 1, 2, 3, 4
         int f;
         for (int i = 0; i < numbers.length; i++) {
             f = 1;
@@ -142,6 +149,19 @@ public class Homework12 {
         a = -1; b = 25; c = 10;
         System.out.println(middleInt(a,b,c));
 
+        System.out.println("\n_____________________Task-5B____________________\n");
+
+        int a1 = 1, b1 = 1, c1 = 1;
+        System.out.println(middleIntB(a1,b1,c1));
+        a1 = 1; b1 = 2; c1 = 2;
+        System.out.println(middleIntB(a1,b1,c1));
+        a1 = 5; b1 = 5; c1 = 8;
+        System.out.println(middleIntB(a1,b1,c1));
+        a1 = 5; b1 = 3; c1 = 5;
+        System.out.println(middleIntB(a1,b1,c1));
+        a1 = -1; b1 = 25; c1 = 10;
+        System.out.println(middleIntB(a1,b1,c1));
+
         System.out.println("\n_____________________Task-6_____________________\n");
 
         int[] numbersA = {1, 2, 3 ,4};
@@ -153,12 +173,22 @@ public class Homework12 {
 
         System.out.println("\n_____________________Task-7_____________________\n");
 
-        int[] numbers7 = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(arrFactorial(numbers7)));
+        int[] numbersD = {1, 2, 3, 4};
+        System.out.println(Arrays.toString(arrFactorial(numbersD)));
+        int[] numbersE = {0, 5};
+        System.out.println(Arrays.toString(arrFactorial(numbersE)));
+        int[] numbersF = {5 , 0, 6};
+        System.out.println(Arrays.toString(arrFactorial(numbersF)));
+        int[] numbersG = {};
+        System.out.println(Arrays.toString(arrFactorial(numbersF)));
 
         System.out.println("\n_____________________Task-8_____________________\n");
 
-        String str8 = "abc123$#%";
+        String str8 = " ";
+        System.out.println(Arrays.toString(categorizeCharacters(str8)));
+        str8 = "abc123$#%";
+        System.out.println(Arrays.toString(categorizeCharacters(str8)));
+        str8 = "12ab$%3c%";
         System.out.println(Arrays.toString(categorizeCharacters(str8)));
 
 
