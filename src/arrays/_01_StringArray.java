@@ -43,5 +43,7 @@ public class _01_StringArray {
         }
         System.out.println("Hello World!!");
 
+        System.out.println("Hello");
+
     }
 }
