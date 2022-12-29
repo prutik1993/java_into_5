@@ -19,7 +19,8 @@ public class Homework12 {
         if(str.length() == 0) return 0;
         for (int i = 0; i < str.length(); i++) {
             if(Character.isDigit(str.charAt(i)))
-               sum += Integer.parseInt(String.valueOf(str.charAt(i)));
+             //  sum += Integer.parseInt(String.valueOf(str.charAt(i)));
+                sum += Character.getNumericValue(str.charAt(i));
         }
         return sum;
     }

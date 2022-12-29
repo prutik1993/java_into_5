@@ -1,13 +1,28 @@
 package collections;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 
 public class Practice01_RemoveDuplicates {
     public static void main(String[] args) {
 
-        System.out.println(Arrays.toString(removeDuplicates(new Integer[]{-5, 10, -5, 10, 1, 2, 5})));
-        System.out.println(Arrays.toString(removeDuplicates(new Integer[]{})));
+        Integer[] nums = {3,5,7,5,3,7,9,8};
+        ArrayList<Integer> duplicate =  new ArrayList<>();
+       // LinkedHashSet<Integer> uniques = new LinkedHashSet<>(Arrays.asList(nums));
+       // System.out.println(uniques);
+
+        for (Integer n : nums) {
+            if(duplicate.contains(n)){
+                System.out.println(n);
+                break;
+            }
+            else duplicate.add(n);
+        }
+
+
+//        System.out.println(Arrays.toString(removeDuplicates(new Integer[]{-5, 10, -5, 10, 1, 2, 5})));
+//        System.out.println(Arrays.toString(removeDuplicates(new Integer[]{})));
     }
 
 

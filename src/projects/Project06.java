@@ -25,16 +25,15 @@ public class Project06 {
 
     //////////////////////////Task-2//////////////////////////
     public static ArrayList<Integer> removeNegatives(ArrayList<Integer> numbers){
-//        Iterator<Integer> negativeIterator = numbers.iterator();
-//        while(negativeIterator.hasNext()){
-//            Integer n = negativeIterator.next();
-//           if(n < 0) negativeIterator.remove();
-//        }
-
-        for (int i = 0; i < numbers.size(); i++) {
-            if(numbers.get(i) < 0) numbers.remove(i--);
+        Iterator<Integer> negativeIterator = numbers.iterator();
+        while(negativeIterator.hasNext()){
+            if(negativeIterator.next() < 0) negativeIterator.remove();
         }
-        // numbers.removeIf(integer -> integer < 0);
+
+//        for (int i = 0; i < numbers.size(); i++) {
+//            if(numbers.get(i) < 0) numbers.remove(i--);
+//        }
+       // numbers.removeIf(i -> i < 0);
         return numbers;
     }
 

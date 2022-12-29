@@ -26,5 +26,6 @@ public class Practice03_SubSet {
         System.out.println(nums.tailSet(7, false)); // [10, 15, 20]
         System.out.println(nums.headSet(5,true)); // [2, 3, 5]
         System.out.println(nums.subSet(5,true,15,true)); // [5, 7, 10, 15]
+        System.out.println(nums.subSet(5,15)); // [5, 7, 10]
     }
 }

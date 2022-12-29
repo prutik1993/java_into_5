@@ -10,7 +10,7 @@ public class Practice04_MinMaxValues {
 
         System.out.println(max(new Integer[]{10, 100, 123, 507, 25}));
         System.out.println(max(new Integer[]{10}));
-        System.out.println(max(new Integer[]{}));
+       // System.out.println(max(new Integer[]{}));
 
 
         System.out.println(min(new Integer[]{10, 100, 123, 507, 25}));
@@ -49,8 +49,9 @@ public class Practice04_MinMaxValues {
     // [12] -> 12 print itself
     // [] -> null
 
-    public static Integer max(Integer[] arr){
-       return new TreeSet<>(Arrays.asList(arr)).pollLast();
+    public static int max(Integer[] arr){
+      TreeSet<Integer> nums = new TreeSet<>(Arrays.asList(arr));
+       return nums.last();
     }
 
     public static Integer min(Integer[] arr){
@@ -68,6 +69,7 @@ public class Practice04_MinMaxValues {
      if(set.size() < 2) return null;
      set.pollLast(); // max removed
      return set.last();
+
     }
     public static Integer secondMin(Integer[] arr){
         TreeSet<Integer> set = new TreeSet<>(Arrays.asList(arr));
