@@ -47,6 +47,20 @@ public class Homework14 {
         return biggest;
     }
     //////////////////////Task-5//////////////////////
+    public static String countSequenceOfCharacters(String str){
+        String answer = "";
+        int count = 1;         //    abbccaa
+        for (int i = 0; i < str.length()-1; i++) {
+            if(str.charAt(i) == str.charAt(i + 1)){
+                count++;
+            }else{
+                answer += String.valueOf(count) + str.charAt(i); // 1a 2b 2c 2a
+                count = 1;
+            }
+            if(i == str.length()-2) answer += String.valueOf(count) + str.charAt(i+1);
+        }
+        return answer;
+    }
 
     public static void main(String[] args) {
 
@@ -81,6 +95,10 @@ public class Homework14 {
         System.out.println(findBiggestNumber("525"));
 
         System.out.println("_______________Task-5_______________");
+
+        System.out.println(countSequenceOfCharacters(""));
+        System.out.println(countSequenceOfCharacters("abc"));
+        System.out.println(countSequenceOfCharacters("abbccaa"));
     }
 }
 
