@@ -24,13 +24,20 @@ public class Homework13 {
 
     //////////////////Task-2//////////////////
     public static ArrayList<Integer> noZero(ArrayList<Integer> numbers){
+//        for (int i = 0; i < numbers.size(); i++) {
+//            if (numbers.get(i) == 0) {
+//                numbers.remove(i);
+//                i--;
+//            }
+//
+//        }
+//       return  numbers;
 //        ArrayList<Integer> answer = new ArrayList<>();
 //        for (Integer number : numbers) {
 //            if(number != 0)
 //                answer.add(number);
 //        }
 //        return answer;
-
         numbers.removeIf(e -> e == 0);
         return numbers;
     }
@@ -54,6 +61,8 @@ public class Homework13 {
 //        return false;
        Arrays.sort(words);
        return Arrays.binarySearch(words,str) >= 0;
+
+       // return Arrays.asList(words).contains(str);
     }
 
     //////////////////Task-5//////////////////
@@ -73,6 +82,14 @@ public class Homework13 {
         sb.append(array[0].substring(0,1).toLowerCase());
         sb.append(array[0].substring(1));
         return sb.toString();
+
+//        String reversedSent = "";
+//        String[] arr = str.toLowerCase().split(" ");
+//        if(arr.length < 2) return "There is not enough words!";
+//        for (int i = arr.length-1; i >= 0; i--) {
+//            reversedSent += arr[i] + " ";
+//        }
+//        return reversedSent.substring(0,1).toUpperCase() + reversedSent.substring(1, reversedSent.length()-1);
     }
 
     //////////////////Task-6//////////////////
@@ -83,12 +100,12 @@ public class Homework13 {
 
     //////////////////Task-7//////////////////
     public static String[] removeArraySpecialsDigits(String[] array){
-        String[] answer = new String[array.length];
+       // String[] answer = new String[array.length];
         for (int i = 0; i < array.length; i++) {
-            String noSpecial = array[i].replaceAll("[^a-zA-Z ]", "");
-            answer[i] = noSpecial;
+           array[i] = removeStringSpecialsDigits(array[i]);
+            //answer[i] = removeStringSpecialsDigits(array[i]);
         }
-        return answer;
+        return array;
     }
 
     //////////////////Task-8//////////////////
@@ -113,6 +130,13 @@ public class Homework13 {
             }
         }
         return answer;
+//        for (int i = 0; i < arr.size(); i++) {
+//            if (arr.get(i).replaceAll("[xX]", "").equals("")){
+//                arr.remove(i);
+//                i--;
+//            } else arr.set(i, arr.get(i).replaceAll("[xX]",""));
+//        }
+//        return arr;
     }
 
     public static void main(String[] args) {
