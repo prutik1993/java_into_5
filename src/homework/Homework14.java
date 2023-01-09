@@ -99,6 +99,7 @@ public class Homework14 {
         System.out.println(countSequenceOfCharacters(""));
         System.out.println(countSequenceOfCharacters("abc"));
         System.out.println(countSequenceOfCharacters("abbccaa"));
+        System.out.println(countSequenceOfCharacters("aaAAa"));
     }
 }
 
