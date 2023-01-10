@@ -24,13 +24,13 @@ public class Homework14 {
         return str;
     }
     //////////////////////Task-3//////////////////////
-    public static int findSumNumbers(String str){
+    public static int findSumNumbers(String str){ // a1b4c  6#
        int sum = 0;
-       String digits = str.replaceAll("[^0-9]"," ");
-       String[] array = digits.split(" ");
+       str = str.replaceAll("[^0-9]"," ");// 1 4 6
+       String[] array = str.split(" ");//[1,4,6]
         for (String a : array) {
             if (!a.isEmpty()) {
-                sum += Integer.parseInt(a);
+                sum += Integer.parseInt(a);// 11
             }
         }
         return sum;
@@ -38,8 +38,8 @@ public class Homework14 {
     ////////////////////Task-4//////////////////////
     public static int findBiggestNumber(String str){
         int biggest = 0;
-        String digits = str.replaceAll("[^0-9]"," ");
-        String[] array = digits.split(" ");
+        str = str.replaceAll("[^0-9]"," ");
+        String[] array = str.split(" ");
         for (String a : array) {
             if(!a.isEmpty() && Integer.parseInt(a) > biggest)
                 biggest = Integer.parseInt(a);
@@ -98,8 +98,8 @@ public class Homework14 {
 
         System.out.println(countSequenceOfCharacters(""));
         System.out.println(countSequenceOfCharacters("abc"));
-        System.out.println(countSequenceOfCharacters("abbccaa"));
-        System.out.println(countSequenceOfCharacters("aaAAa"));
+        System.out.println(countSequenceOfCharacters("abbccaa")); //1a2b2c2a
+        System.out.println(countSequenceOfCharacters("aaAAa"));   // 2a2A1a
     }
 }
 
